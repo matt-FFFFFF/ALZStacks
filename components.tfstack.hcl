@@ -51,8 +51,8 @@ provider "random" "all" {
 }
 
 component "alz_management" {
-  source  = "Azure/avm-ptn-alz-management/azurerm"
-  version = "0.4.0"
+  source = "git::https://github.com/Azure/terraform-azurerm-avm-ptn-alz-management.git?ref=stacks"
+  # version = "0.4.0"
   providers = {
     azapi   = provider.azapi.management
     azurerm = provider.azurerm.management
@@ -60,7 +60,7 @@ component "alz_management" {
     random  = provider.random.all
   }
   inputs = {
-    automation_account_name           = ""
+    automation_account_name           = var.automation_account_name
     linked_automation_account_enabled = false
     location                          = var.location
     location                          = var.location
