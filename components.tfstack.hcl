@@ -34,7 +34,8 @@ provider "alz" "prod" {
     use_msi    = false
     use_oidc   = true
     library_references = [{
-      custom_url = "${path.module}/alzlibrary"
+      # Local path ref doesn't seem to work in TF Cloud, can't seem to use path.module?
+      custom_url = "git::https://github.com/matt-FFFFFF/ALZStacks//alzlibrary?ref=main"
     }]
   }
 }
