@@ -122,7 +122,7 @@ component "alz" {
     location           = var.location
     parent_resource_id = var.tenant_id
     policy_default_values = {
-      ama_user_assigned_managed_identity_name = basename(component.alz_management.user_assigned_identity_ids.ama)
+      ama_user_assigned_managed_identity_name = basename(component.alz_management.user_assigned_identity_ids.ama.id)
     }
   }
 }
