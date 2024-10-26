@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/architecture_definition.json",
+  "name": "mattffffff-alz",
+  "management_groups": [
+    {
+      "archetypes": [
+        "root"
+      ],
+      "display_name": "ALZ root (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-alzroot",
+      "parent_id": null
+    },
+    {
+      "archetypes": [
+        "platform"
+      ],
+      "display_name": "Platform (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-platform",
+      "parent_id": "alzroot"
+    },
+    {
+      "archetypes": [
+        "landing_zones"
+      ],
+      "display_name": "Landing zones (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-landingzones",
+      "parent_id": "alzroot"
+    },
+    {
+      "archetypes": [
+        "corp"
+      ],
+      "display_name": "Corp (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-corp",
+      "parent_id": "landingzones"
+    },
+    {
+      "archetypes": [
+        "online"
+      ],
+      "display_name": "Online (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-online",
+      "parent_id": "landingzones"
+    },
+    {
+      "archetypes": [
+        "sandboxes"
+      ],
+      "display_name": "Sandboxes (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-sandboxes",
+      "parent_id": "alzroot"
+    },
+    {
+      "archetypes": [
+        "management"
+      ],
+      "display_name": "Management (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-management",
+      "parent_id": "platform"
+    },
+    {
+      "archetypes": [
+        "connectivity"
+      ],
+      "display_name": "Connectivity (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-connectivity",
+      "parent_id": "platform"
+    },
+    {
+      "archetypes": [
+        "identity"
+      ],
+      "display_name": "Identity (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-identity",
+      "parent_id": "platform"
+    },
+    {
+      "archetypes": [
+        "decommissioned"
+      ],
+      "display_name": "Decommissioned (mattffffff)",
+      "exists": false,
+      "id": "mattffffff-decommissioned",
+      "parent_id": "alzroot"
+    }
+  ]
+}
