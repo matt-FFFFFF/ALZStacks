@@ -18,7 +18,7 @@
       "display_name": "Platform (mattffffff)",
       "exists": false,
       "id": "mattffffff-platform",
-      "parent_id": "alzroot"
+      "parent_id": "mattffffff-alzroot"
     },
     {
       "archetypes": [
@@ -27,7 +27,7 @@
       "display_name": "Landing zones (mattffffff)",
       "exists": false,
       "id": "mattffffff-landingzones",
-      "parent_id": "alzroot"
+      "parent_id": "mattffffff-alzroot"
     },
     {
       "archetypes": [
@@ -45,7 +45,7 @@
       "display_name": "Online (mattffffff)",
       "exists": false,
       "id": "mattffffff-online",
-      "parent_id": "landingzones"
+      "parent_id": "mattffffff-landingzones"
     },
     {
       "archetypes": [
@@ -54,7 +54,7 @@
       "display_name": "Sandboxes (mattffffff)",
       "exists": false,
       "id": "mattffffff-sandboxes",
-      "parent_id": "alzroot"
+      "parent_id": "mattffffff-alzroot"
     },
     {
       "archetypes": [
@@ -63,7 +63,7 @@
       "display_name": "Management (mattffffff)",
       "exists": false,
       "id": "mattffffff-management",
-      "parent_id": "platform"
+      "parent_id": "mattffffff-platform"
     },
     {
       "archetypes": [
@@ -72,7 +72,7 @@
       "display_name": "Connectivity (mattffffff)",
       "exists": false,
       "id": "mattffffff-connectivity",
-      "parent_id": "platform"
+      "parent_id": "mattffffff-platform"
     },
     {
       "archetypes": [
@@ -81,7 +81,7 @@
       "display_name": "Identity (mattffffff)",
       "exists": false,
       "id": "mattffffff-identity",
-      "parent_id": "platform"
+      "parent_id": "mattffffff-platform"
     },
     {
       "archetypes": [
@@ -90,7 +90,7 @@
       "display_name": "Decommissioned (mattffffff)",
       "exists": false,
       "id": "mattffffff-decommissioned",
-      "parent_id": "alzroot"
+      "parent_id": "mattffffff-alzroot"
     }
   ]
 }
