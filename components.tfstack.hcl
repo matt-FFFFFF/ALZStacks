@@ -27,14 +27,14 @@ required_providers {
 
 provider "alz" "prod" {
   config {
-    oidc_request_token = var.identity_token
-    tenant_id          = var.tenant_id
-    client_id          = var.client_id
-    use_cli            = false
-    use_msi            = false
-    use_oidc           = true
+    oidc_token = var.identity_token
+    tenant_id  = var.tenant_id
+    client_id  = var.client_id
+    use_cli    = false
+    use_msi    = false
+    use_oidc   = true
     library_references = [{
-      # Local ref doesn't work in TF Cloud, maybe it doesn't get uploaded in the bundle?
+      # Local path ref doesn't seem to work in TF Cloud, maybe it doesn't get uploaded in the bundle?
       custom_url = "git::https://github.com/matt-FFFFFF/ALZStacks//alzlibrary?ref=main"
     }]
   }
