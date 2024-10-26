@@ -22,9 +22,25 @@ provider "azurerm" "management" {
   }
 }
 
+provider "azapi" "management" {
+  config {
+    tenant_id       = var.tenant_id
+    subscription_id = var.subscription_id_management
+    use_oidc        = true
+    use_cli         = false
+    use_msi         = false
+    oidc_token      = var.identity_token
+    client_id       = var.client_id
+  }
+}
+
 component "alz_management" {
   source  = "Azure/avm-ptn-alz-management/azurerm"
   version = "0.4.0"
+  providers = {
+    azapi   = azapi.management
+    azurerm = azurerm.management
+  }
   inputs = {
     location                          = var.location
     resource_group_name               = "rg-management"
