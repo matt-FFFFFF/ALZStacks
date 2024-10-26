@@ -28,6 +28,8 @@ required_providers {
 provider "alz" "prod" {
   config {
     oidc_request_token = var.identity_token
+    tenant_id          = var.tenant_id
+    client_id          = var.client_id
     use_cli            = false
     use_msi            = false
     use_oidc           = true
