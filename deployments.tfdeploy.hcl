@@ -8,5 +8,6 @@ deployment "prod" {
     subscription_id_management   = "e5b30252-0657-46bf-a8bc-4447918d7f99"
     location                     = "swedencentral"
     log_analytics_workspace_name = "law-dbfesfiufdghk"
+    tenant_id                    = "dac8feee-8768-4fbd-9cf9-9d96d4718018"
   }
 }

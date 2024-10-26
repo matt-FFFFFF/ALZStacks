@@ -7,45 +7,61 @@ required_providers {
     source  = "hashicorp/azurerm"
     version = "~> 3.99"
   }
+  modtm = {
+    source  = "azure/modtm"
+    version = "~> 0.3"
+  }
+  random = {
+    source  = "hashicorp/random"
+    version = "~> 3.6"
+  }
 }
 
 provider "azurerm" "management" {
   config {
     features {}
-    tenant_id       = var.tenant_id
+    client_id       = var.client_id
+    oidc_token      = var.identity_token
     subscription_id = var.subscription_id_management
-    use_oidc        = true
+    tenant_id       = var.tenant_id
     use_cli         = false
     use_msi         = false
-    oidc_token      = var.identity_token
-    client_id       = var.client_id
+    use_oidc        = true
   }
 }
 
 provider "azapi" "management" {
   config {
-    tenant_id       = var.tenant_id
+    client_id       = var.client_id
+    oidc_token      = var.identity_token
     subscription_id = var.subscription_id_management
-    use_oidc        = true
+    tenant_id       = var.tenant_id
     use_cli         = false
     use_msi         = false
-    oidc_token      = var.identity_token
-    client_id       = var.client_id
+    use_oidc        = true
   }
+}
+
+provider "modtm" "all" {
+  config {}
+}
+
+provider "random" "all" {
+  config {}
 }
 
 component "alz_management" {
   source  = "Azure/avm-ptn-alz-management/azurerm"
   version = "0.4.0"
   providers = {
-    azapi   = azapi.management
-    azurerm = azurerm.management
+    azapi   = provider.azapi.management
+    azurerm = provider.azurerm.management
   }
   inputs = {
-    location                          = var.location
-    resource_group_name               = "rg-management"
     linked_automation_account_enabled = false
-    log_analytics_workspace_name      = var.log_analytics_workspace_name
     location                          = var.location
+    location                          = var.location
+    log_analytics_workspace_name      = var.log_analytics_workspace_name
+    resource_group_name               = "rg-management"
   }
 }
