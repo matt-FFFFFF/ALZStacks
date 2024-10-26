@@ -56,8 +56,11 @@ component "alz_management" {
   providers = {
     azapi   = provider.azapi.management
     azurerm = provider.azurerm.management
+    modtm   = provider.modtm.all
+    random  = provider.random.all
   }
   inputs = {
+    automation_account_name           = ""
     linked_automation_account_enabled = false
     location                          = var.location
     location                          = var.location
