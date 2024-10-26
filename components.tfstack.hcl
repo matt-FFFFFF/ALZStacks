@@ -25,7 +25,7 @@ provider "azurerm" "management" {
 component "alz_management" {
   source  = "Azure/avm-ptn-alz-management/azurerm"
   version = "0.4.0"
-  variables = {
+  inputs = {
     location                          = var.location
     resource_group_name               = "rg-management"
     linked_automation_account_enabled = false

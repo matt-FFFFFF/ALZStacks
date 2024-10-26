@@ -25,3 +25,8 @@ variable "location" {
   type        = string
   description = "The location for the resources"
 }
+
+variable "log_analytics_workspace_name" {
+  type        = string
+  description = "The name of the log analytics workspace"
+}
